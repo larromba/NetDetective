@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F5F5BE224251BF500A0E227 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BE124251BF500A0E227 /* main.swift */; };
+		7F5F5BEB24256D1400A0E227 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BEA24256D1400A0E227 /* Command.swift */; };
+		7F5F5BED242573F800A0E227 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BEC242573F800A0E227 /* DataHandler.swift */; };
+		7F5F5BEF2426237400A0E227 /* NetworkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BEE2426237400A0E227 /* NetworkItem.swift */; };
+		7F5F5BF124263A0700A0E227 /* FormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BF024263A0700A0E227 /* FormatterExtensions.swift */; };
+		7F5F5BF324264F8C00A0E227 /* FutureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BF224264F8C00A0E227 /* FutureExtensions.swift */; };
+		7F5F5BF52426628B00A0E227 /* LaunchPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BF42426628B00A0E227 /* LaunchPath.swift */; };
+		7F5F5C082426A9F500A0E227 /* NetDetective in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F5F5BDE24251BF500A0E227 /* NetDetective */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F5F5C052426A9DA00A0E227 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F5F5BD624251BF500A0E227 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F5F5BDD24251BF500A0E227;
+			remoteInfo = NetDetective;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7F5F5BDC24251BF500A0E227 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		7F5F5C072426A9E700A0E227 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				7F5F5C082426A9F500A0E227 /* NetDetective in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7F5F5BDE24251BF500A0E227 /* NetDetective */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetDetective; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F5F5BE124251BF500A0E227 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7F5F5BEA24256D1400A0E227 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		7F5F5BEC242573F800A0E227 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
+		7F5F5BEE2426237400A0E227 /* NetworkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkItem.swift; sourceTree = "<group>"; };
+		7F5F5BF024263A0700A0E227 /* FormatterExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterExtensions.swift; sourceTree = "<group>"; };
+		7F5F5BF224264F8C00A0E227 /* FutureExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutureExtensions.swift; sourceTree = "<group>"; };
+		7F5F5BF42426628B00A0E227 /* LaunchPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPath.swift; sourceTree = "<group>"; };
+		7F5F5BFF2426A9CA00A0E227 /* NetDetective.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetDetective.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F5F5C012426A9CA00A0E227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FD653BE2426AEBB0060F407 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F5F5BDB24251BF500A0E227 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F5F5BFC2426A9CA00A0E227 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F5F5BD524251BF500A0E227 = {
+			isa = PBXGroup;
+			children = (
+				7F5F5BE024251BF500A0E227 /* NetDetective */,
+				7F5F5C002426A9CA00A0E227 /* NetDetectiveBundle */,
+				7F5F5BDF24251BF500A0E227 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F5F5BDF24251BF500A0E227 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F5F5BDE24251BF500A0E227 /* NetDetective */,
+				7F5F5BFF2426A9CA00A0E227 /* NetDetective.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F5F5BE024251BF500A0E227 /* NetDetective */ = {
+			isa = PBXGroup;
+			children = (
+				7FD653BE2426AEBB0060F407 /* README.md */,
+				7F5F5BE124251BF500A0E227 /* main.swift */,
+				7F5F5BFA24269BA200A0E227 /* Handler */,
+				7F5F5BF924269B8600A0E227 /* Model */,
+				7F5F5BF824269B6C00A0E227 /* Extensions */,
+			);
+			path = NetDetective;
+			sourceTree = "<group>";
+		};
+		7F5F5BF824269B6C00A0E227 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F5F5BF024263A0700A0E227 /* FormatterExtensions.swift */,
+				7F5F5BF224264F8C00A0E227 /* FutureExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		7F5F5BF924269B8600A0E227 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7F5F5BEA24256D1400A0E227 /* Command.swift */,
+				7F5F5BF42426628B00A0E227 /* LaunchPath.swift */,
+				7F5F5BEE2426237400A0E227 /* NetworkItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7F5F5BFA24269BA200A0E227 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				7F5F5BEC242573F800A0E227 /* DataHandler.swift */,
+			);
+			name = Handler;
+			sourceTree = "<group>";
+		};
+		7F5F5C002426A9CA00A0E227 /* NetDetectiveBundle */ = {
+			isa = PBXGroup;
+			children = (
+				7F5F5C012426A9CA00A0E227 /* Info.plist */,
+			);
+			path = NetDetectiveBundle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F5F5BDD24251BF500A0E227 /* NetDetective */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F5F5BE524251BF500A0E227 /* Build configuration list for PBXNativeTarget "NetDetective" */;
+			buildPhases = (
+				7F5F5BDA24251BF500A0E227 /* Sources */,
+				7F5F5BDB24251BF500A0E227 /* Frameworks */,
+				7F5F5BDC24251BF500A0E227 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetDetective;
+			productName = NetDetective;
+			productReference = 7F5F5BDE24251BF500A0E227 /* NetDetective */;
+			productType = "com.apple.product-type.tool";
+		};
+		7F5F5BFE2426A9CA00A0E227 /* NetDetectiveBundle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F5F5C022426A9CA00A0E227 /* Build configuration list for PBXNativeTarget "NetDetectiveBundle" */;
+			buildPhases = (
+				7F5F5BFB2426A9CA00A0E227 /* Sources */,
+				7F5F5BFC2426A9CA00A0E227 /* Frameworks */,
+				7F5F5BFD2426A9CA00A0E227 /* Resources */,
+				7F5F5C072426A9E700A0E227 /* CopyFiles */,
+				7F5F5C092426AA0500A0E227 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F5F5C062426A9DA00A0E227 /* PBXTargetDependency */,
+			);
+			name = NetDetectiveBundle;
+			productName = NetDetectiveBundle;
+			productReference = 7F5F5BFF2426A9CA00A0E227 /* NetDetective.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F5F5BD624251BF500A0E227 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Lee Arromba";
+				TargetAttributes = {
+					7F5F5BDD24251BF500A0E227 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					7F5F5BFE2426A9CA00A0E227 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 7F5F5BD924251BF500A0E227 /* Build configuration list for PBXProject "NetDetective" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F5F5BD524251BF500A0E227;
+			productRefGroup = 7F5F5BDF24251BF500A0E227 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F5F5BDD24251BF500A0E227 /* NetDetective */,
+				7F5F5BFE2426A9CA00A0E227 /* NetDetectiveBundle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F5F5BFD2426A9CA00A0E227 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F5F5C092426AA0500A0E227 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#open ${BUILT_PRODUCTS_DIR}\ncp ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME} /usr/local/bin/net-detective\ncp -r ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.bundle /usr/local/bin/\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F5F5BDA24251BF500A0E227 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F5F5BEF2426237400A0E227 /* NetworkItem.swift in Sources */,
+				7F5F5BF124263A0700A0E227 /* FormatterExtensions.swift in Sources */,
+				7F5F5BE224251BF500A0E227 /* main.swift in Sources */,
+				7F5F5BEB24256D1400A0E227 /* Command.swift in Sources */,
+				7F5F5BF324264F8C00A0E227 /* FutureExtensions.swift in Sources */,
+				7F5F5BED242573F800A0E227 /* DataHandler.swift in Sources */,
+				7F5F5BF52426628B00A0E227 /* LaunchPath.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F5F5BFB2426A9CA00A0E227 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F5F5C062426A9DA00A0E227 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F5F5BDD24251BF500A0E227 /* NetDetective */;
+			targetProxy = 7F5F5C052426A9DA00A0E227 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7F5F5BE324251BF500A0E227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F5F5BE424251BF500A0E227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		7F5F5BE624251BF500A0E227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7F5F5BE724251BF500A0E227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7F5F5C032426A9CA00A0E227 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				INFOPLIST_FILE = NetDetectiveBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.NetDetectiveBundle;
+				PRODUCT_NAME = NetDetective;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		7F5F5C042426A9CA00A0E227 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				INFOPLIST_FILE = NetDetectiveBundle/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.NetDetectiveBundle;
+				PRODUCT_NAME = NetDetective;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F5F5BD924251BF500A0E227 /* Build configuration list for PBXProject "NetDetective" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F5F5BE324251BF500A0E227 /* Debug */,
+				7F5F5BE424251BF500A0E227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F5F5BE524251BF500A0E227 /* Build configuration list for PBXNativeTarget "NetDetective" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F5F5BE624251BF500A0E227 /* Debug */,
+				7F5F5BE724251BF500A0E227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F5F5C022426A9CA00A0E227 /* Build configuration list for PBXNativeTarget "NetDetectiveBundle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F5F5C032426A9CA00A0E227 /* Debug */,
+				7F5F5C042426A9CA00A0E227 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F5F5BD624251BF500A0E227 /* Project object */;
+}
