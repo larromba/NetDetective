@@ -13,8 +13,8 @@ struct DataHandler {
                 .dropFirst()
                 .flatMap { try [NetworkItem(data: String($0))] }
             items = try buildHierachy(from: items)
-                .filter { $0.bytes > 0 }
-                .sorted(by: { $0.bytes > $1.bytes })
+                .filter { $0.maxBytesAgnostic > 0 }
+                .sorted(by: { $0.maxBytesAgnostic > $1.maxBytesAgnostic })
             return .success(items)
         } catch {
             return .failure(error)

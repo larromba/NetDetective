@@ -9,8 +9,9 @@ struct NetworkItem {
 
     var time: Date
     var name: String
-    var bytes: Int
-    lazy var subItems = [NetworkItem]()
+    var bytesIn: Int
+    var bytesOut: Int
+    var subItems = [NetworkItem]()
 
     init(data: String) throws {
         let items = data.split(separator: ",").map { String($0) }
@@ -19,7 +20,8 @@ struct NetworkItem {
         }
         time = try NetworkItem.time(for: items, in: data)
         name = String(items[1])
-        bytes = try NetworkItem.bytes(for: items, in: data)
+        bytesIn = try NetworkItem.bytesIn(for: items, in: data)
+        bytesOut = try NetworkItem.bytesOut(for: items, in: data)
     }
 
     // MARK: - private
@@ -34,14 +36,32 @@ struct NetworkItem {
         return date
     }
 
-    private static func bytes(for items: [String], in data: String) throws -> Int {
+    // TODO: refactor
+    private static func bytesIn(for items: [String], in data: String) throws -> Int {
         if items.count == 2 {
             return 0
         }
-        guard items.count == 3 else {
-            throw InitError.invalidItemCount(expected: "3", count: items.count, forItem: data)
+        guard items.count == 4 else {
+            throw InitError.invalidItemCount(expected: "4", count: items.count, forItem: data)
         }
         let item = items[2]
+        if item.count == 0 {
+            return 0
+        }
+        guard let bytes = Int(item) else {
+            throw InitError.invalidBytes(bytes: item, forItem: data)
+        }
+        return bytes
+    }
+
+    private static func bytesOut(for items: [String], in data: String) throws -> Int {
+        if items.count == 2 {
+            return 0
+        }
+        guard items.count == 4 else {
+            throw InitError.invalidItemCount(expected: "4", count: items.count, forItem: data)
+        }
+        let item = items[3]
         if item.count == 0 {
             return 0
         }
@@ -63,7 +83,21 @@ extension NetworkItem {
         }
     }
 
-    var bytesFormatted: String {
-        return ByteCountFormatter.string(fromByteCount: Int64(bytes), countStyle: .memory)
+    var bytesInFormatted: String {
+        if bytesIn == 0 {
+            return "-"
+        }
+        return ByteCountFormatter.string(fromByteCount: Int64(bytesIn), countStyle: .memory)
+    }
+
+    var bytesOutFormatted: String {
+        if bytesOut == 0 {
+            return "-"
+        }
+        return ByteCountFormatter.string(fromByteCount: Int64(bytesOut), countStyle: .memory)
+    }
+
+    var maxBytesAgnostic: Int {
+        bytesIn > bytesOut ? bytesIn : bytesOut
     }
 }

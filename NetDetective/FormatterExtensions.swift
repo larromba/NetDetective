@@ -11,15 +11,18 @@ extension Formatter {
         do {
             let column1Length = try self.column1Length(from: items)
             let column2Length = try self.column2Length(from: items)
-            var output = String(format: "%-\(column1Length)s %-\(column2Length)s %@\n",
+            let column3Length = try self.column3Length(from: items)
+            let format = "%-\(column1Length)s %-\(column2Length)s %-\(column3Length)s %@\n"
+            var output = String(format: format,
                                 try "PROCESS".cString(),
-                                try "SENT".cString(),
+                                try "IN".cString(),
+                                try "OUT".cString(),
                                 "MORE INFO...")
-
             try items.forEach {
-                output.append(String(format: "%-\(column1Length)s %-\(column2Length)s %@\n",
+                output.append(String(format: format,
                                      try $0.nameFormatted.cString(),
-                                     try $0.bytesFormatted.cString(),
+                                     try $0.bytesInFormatted.cString(),
+                                     try $0.bytesOutFormatted.cString(),
                                      "https://www.google.com/search?q=what+is+\($0.nameFormatted)"))
             }
             return .success(output)
@@ -38,7 +41,14 @@ extension Formatter {
     }
 
     private static func column2Length(from items: [NetworkItem]) throws -> Int {
-        var strings = items.map { $0.bytesFormatted }
+        var strings = items.map { $0.bytesInFormatted }
+        strings = strings.sorted(by: { $0.count > $1.count })
+        guard let length = strings.first?.count else { throw StringFormatError.length }
+        return length + 5
+    }
+
+    private static func column3Length(from items: [NetworkItem]) throws -> Int {
+        var strings = items.map { $0.bytesOutFormatted }
         strings = strings.sorted(by: { $0.count > $1.count })
         guard let length = strings.first?.count else { throw StringFormatError.length }
         return length + 5

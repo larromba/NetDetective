@@ -251,7 +251,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#open ${BUILT_PRODUCTS_DIR}\ncp ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME} /usr/local/bin/net-detective\ncp -r ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.bundle /usr/local/bin/\n";
+			shellScript = "#open ${BUILT_PRODUCTS_DIR}\ncp ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME} /usr/local/bin/net-detective\n#cp -r ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.bundle /usr/local/bin/\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
