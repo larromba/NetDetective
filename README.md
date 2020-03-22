@@ -66,6 +66,7 @@ max bytes   ->      min bytes
 ## Known issues
 
 1. `error code -9`
+
 When rebuilding to `usr/local/bin`, sometimes an XCode clean (`cmd+shift+K`) and uninstall *(see Uninstallation section above)* is first needed.
 
 ## Licence
