@@ -1,8 +1,8 @@
 import Foundation
 
 struct NetworkItem {
-    enum NetworkItemError: Error {
-        case unexpectedItemCount(expected: String, count: Int, forItem: String)
+    enum InitError: Error {
+        case invalidItemCount(expected: String, count: Int, forItem: String)
         case invalidDate(date: String, forItem: String)
         case invalidBytes(bytes: String, forItem: String)
     }
@@ -15,7 +15,7 @@ struct NetworkItem {
     init(data: String) throws {
         let items = data.split(separator: ",").map { String($0) }
         guard items.count >= 2 else {
-            throw NetworkItemError.unexpectedItemCount(expected: ">=2", count: items.count, forItem: data)
+            throw InitError.invalidItemCount(expected: ">=2", count: items.count, forItem: data)
         }
         time = try NetworkItem.time(for: items, in: data)
         name = String(items[1])
@@ -29,7 +29,7 @@ struct NetworkItem {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss.SSSSSS"
         guard let date = dateFormatter.date(from: item) else {
-            throw NetworkItemError.invalidDate(date: item, forItem: data)
+            throw InitError.invalidDate(date: item, forItem: data)
         }
         return date
     }
@@ -39,14 +39,14 @@ struct NetworkItem {
             return 0
         }
         guard items.count == 3 else {
-            throw NetworkItemError.unexpectedItemCount(expected: "3", count: items.count, forItem: data)
+            throw InitError.invalidItemCount(expected: "3", count: items.count, forItem: data)
         }
         let item = items[2]
         if item.count == 0 {
             return 0
         }
         guard let bytes = Int(item) else {
-            throw NetworkItemError.invalidBytes(bytes: item, forItem: data)
+            throw InitError.invalidBytes(bytes: item, forItem: data)
         }
         return bytes
     }

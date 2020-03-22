@@ -10,10 +10,10 @@ protocol Commanding {
 }
 
 final class Command: Commanding {
-    enum CommandError: Error {
+    enum ProcessError: Error {
         case failed(code: Int)
-        case invalidData
-        case invalidString
+        case missingData
+        case invalidDataType
     }
 
     private let process = Process()
@@ -29,13 +29,13 @@ final class Command: Commanding {
                                                  object: output.fileHandleForReading)
         .tryMap { notification -> String in
             if let errorNumber = notification.userInfo?["NSFileHandleError"] as? NSNumber {
-                throw CommandError.failed(code: errorNumber.intValue)
+                throw ProcessError.failed(code: errorNumber.intValue)
             }
             guard let item = notification.userInfo?[NSFileHandleNotificationDataItem] as? Data else {
-                throw CommandError.invalidData
+                throw ProcessError.missingData
             }
             guard let string = String(data: item, encoding: String.Encoding.utf8) else {
-                throw CommandError.invalidString
+                throw ProcessError.invalidDataType
             }
             return string
         }.mapError { error in

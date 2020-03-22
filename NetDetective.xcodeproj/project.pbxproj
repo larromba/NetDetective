@@ -60,6 +60,7 @@
 		7F5F5BF42426628B00A0E227 /* LaunchPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPath.swift; sourceTree = "<group>"; };
 		7F5F5BFF2426A9CA00A0E227 /* NetDetective.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetDetective.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5F5C012426A9CA00A0E227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F7E596F2426B79B00570561 /* nettop-test-output.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "nettop-test-output.txt"; sourceTree = "<group>"; };
 		7FD653BE2426AEBB0060F407 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -87,6 +88,7 @@
 				7F5F5BE024251BF500A0E227 /* NetDetective */,
 				7F5F5C002426A9CA00A0E227 /* NetDetectiveBundle */,
 				7F5F5BDF24251BF500A0E227 /* Products */,
+				7F7E596F2426B79B00570561 /* nettop-test-output.txt */,
 			);
 			sourceTree = "<group>";
 		};

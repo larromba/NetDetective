@@ -2,7 +2,7 @@ import Foundation
 import Combine
 
 struct DataHandler {
-    enum DataHandlerError: Error {
+    enum ProcessingError: Error {
         case unexpectedFormat
     }
 
@@ -25,7 +25,7 @@ struct DataHandler {
 
     private static func buildHierachy(from items: [NetworkItem]) throws -> [NetworkItem] {
         guard items.count > 0, items[0].isTopItem else {
-            throw DataHandlerError.unexpectedFormat
+            throw ProcessingError.unexpectedFormat
         }
         var items = items
         var hierachy = [NetworkItem]()

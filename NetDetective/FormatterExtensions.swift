@@ -1,9 +1,9 @@
 import Foundation
 import Combine
 
-enum FormatError: Error {
-    case cStringConvertion
-    case stringLength
+enum StringFormatError: Error {
+    case cString
+    case length
 }
 
 extension Formatter {
@@ -33,14 +33,14 @@ extension Formatter {
     private static func column1Length(from items: [NetworkItem]) throws -> Int {
         var strings = items.map { $0.nameFormatted }
         strings = strings.sorted(by: { $0.count > $1.count })
-        guard let length = strings.first?.count else { throw FormatError.stringLength }
+        guard let length = strings.first?.count else { throw StringFormatError.length }
         return length + 5
     }
 
     private static func column2Length(from items: [NetworkItem]) throws -> Int {
         var strings = items.map { $0.bytesFormatted }
         strings = strings.sorted(by: { $0.count > $1.count })
-        guard let length = strings.first?.count else { throw FormatError.stringLength }
+        guard let length = strings.first?.count else { throw StringFormatError.length }
         return length + 5
     }
  }
@@ -50,7 +50,7 @@ extension Formatter {
 private extension String {
     func cString() throws -> UnsafePointer<Int8> {
         guard let string = (self as NSString).utf8String else {
-            throw FormatError.cStringConvertion
+            throw StringFormatError.cString
         }
         return string
     }
