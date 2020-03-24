@@ -8,7 +8,7 @@ extension AnyPublisher {
     }
 
     static func failure<T>(_ error: Error) -> AnyPublisher<T, Error> {
-        return Future<T, Error> { promise in
+        Future<T, Error> { promise in
             promise(.failure(error))
         }.eraseToAnyPublisher()
     }

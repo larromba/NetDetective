@@ -1,5 +1,5 @@
-import Foundation
 import Combine
+import Foundation
 
 enum StringFormatError: Error {
     case cString
@@ -8,6 +8,9 @@ enum StringFormatError: Error {
 
 extension Formatter {
     static func format(items: [NetworkItem]) -> AnyPublisher<String, Error> {
+        guard !items.isEmpty else {
+            return .success("no processes are sending or receiving data")
+        }
         do {
             let column1Length = try self.column1Length(from: items)
             let column2Length = try self.column2Length(from: items)

@@ -1,0 +1,4 @@
+PROCESS             IN               OUT         MORE INFO...
+systemstats         1,000 bytes      -           https://www.google.com/search?q=what+is+systemstats
+udp4 *:*<->*:*      -                -           https://www.google.com/search?q=what+is+udp4 *:*<->*:*
+configd             -                977 KB      https://www.google.com/search?q=what+is+configd

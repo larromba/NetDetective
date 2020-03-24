@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F030D93242793B8001E7413 /* DataHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030D92242793B8001E7413 /* DataHandlerTests.swift */; };
+		7F030DA624279B09001E7413 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BEC242573F800A0E227 /* DataHandler.swift */; };
+		7F030DA724279B1B001E7413 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BEA24256D1400A0E227 /* Command.swift */; };
+		7F030DA924279B20001E7413 /* NetworkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BEE2426237400A0E227 /* NetworkItem.swift */; };
+		7F030DAA24279B23001E7413 /* FormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BF024263A0700A0E227 /* FormatterExtensions.swift */; };
+		7F030DAB24279B25001E7413 /* FutureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BF224264F8C00A0E227 /* FutureExtensions.swift */; };
+		7F030DAE24279BC0001E7413 /* valid-nettop-output.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7F030DA3242796D7001E7413 /* valid-nettop-output.txt */; };
+		7F030DB224279CA2001E7413 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DB124279CA2001E7413 /* StringExtensions.swift */; };
+		7F030DB424279F10001E7413 /* CompletionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DB324279F10001E7413 /* CompletionExtensions.swift */; };
+		7F030DB524279F10001E7413 /* CompletionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DB324279F10001E7413 /* CompletionExtensions.swift */; };
+		7F030DB82427A0E2001E7413 /* invalid-nettop-output.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7F030DB72427A0E2001E7413 /* invalid-nettop-output.txt */; };
+		7F030DBB2427A24B001E7413 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DBA2427A24B001E7413 /* CommandTests.swift */; };
+		7F030DBD2427A259001E7413 /* NetworkItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DBC2427A259001E7413 /* NetworkItemTests.swift */; };
+		7F030DBF2427A264001E7413 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DBE2427A264001E7413 /* FormatterTests.swift */; };
+		7F030DC12429FB97001E7413 /* no-bytes-nettop-output.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7F030DC02429FB97001E7413 /* no-bytes-nettop-output.txt */; };
+		7F030DC32429FD73001E7413 /* no-processes-nettop-output.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7F030DC22429FD73001E7413 /* no-processes-nettop-output.txt */; };
+		7F030DC8242A8893001E7413 /* invalid-data.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F030DC7242A8893001E7413 /* invalid-data.png */; };
+		7F030DCA242A88B3001E7413 /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DC9242A88B3001E7413 /* NSImageExtensions.swift */; };
+		7F030DCE242A93CE001E7413 /* Processing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DCD242A93CE001E7413 /* Processing.swift */; };
+		7F030DD2242A94C3001E7413 /* Pipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DD1242A94C3001E7413 /* Pipeable.swift */; };
+		7F030DD3242A94C3001E7413 /* Pipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DD1242A94C3001E7413 /* Pipeable.swift */; };
+		7F030DD9242A9965001E7413 /* mocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DD8242A9965001E7413 /* mocks.generated.swift */; };
+		7F030DDC242A99AE001E7413 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DDB242A99AE001E7413 /* Mockable.swift */; };
+		7F030DDE242A9A49001E7413 /* Processing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DCD242A93CE001E7413 /* Processing.swift */; };
+		7F030DE0242A9A65001E7413 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030DDB242A99AE001E7413 /* Mockable.swift */; };
+		7F030DE2242AC088001E7413 /* valid-formatter-output.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7F030DE1242AC088001E7413 /* valid-formatter-output.txt */; };
 		7F5F5BE224251BF500A0E227 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BE124251BF500A0E227 /* main.swift */; };
 		7F5F5BEB24256D1400A0E227 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BEA24256D1400A0E227 /* Command.swift */; };
 		7F5F5BED242573F800A0E227 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BEC242573F800A0E227 /* DataHandler.swift */; };
@@ -18,6 +44,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7F030DA124279536001E7413 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F5F5BD624251BF500A0E227 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F5F5BDD24251BF500A0E227;
+			remoteInfo = NetDetective;
+		};
 		7F5F5C052426A9DA00A0E227 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7F5F5BD624251BF500A0E227 /* Project object */;
@@ -50,6 +83,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F030D90242793B8001E7413 /* NetDetectiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetDetectiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F030D92242793B8001E7413 /* DataHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandlerTests.swift; sourceTree = "<group>"; };
+		7F030D94242793B8001E7413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F030DA3242796D7001E7413 /* valid-nettop-output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "valid-nettop-output.txt"; sourceTree = "<group>"; };
+		7F030DB124279CA2001E7413 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		7F030DB324279F10001E7413 /* CompletionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionExtensions.swift; sourceTree = "<group>"; };
+		7F030DB72427A0E2001E7413 /* invalid-nettop-output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "invalid-nettop-output.txt"; sourceTree = "<group>"; };
+		7F030DBA2427A24B001E7413 /* CommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandTests.swift; sourceTree = "<group>"; };
+		7F030DBC2427A259001E7413 /* NetworkItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkItemTests.swift; sourceTree = "<group>"; };
+		7F030DBE2427A264001E7413 /* FormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
+		7F030DC02429FB97001E7413 /* no-bytes-nettop-output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "no-bytes-nettop-output.txt"; sourceTree = "<group>"; };
+		7F030DC22429FD73001E7413 /* no-processes-nettop-output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "no-processes-nettop-output.txt"; sourceTree = "<group>"; };
+		7F030DC7242A8893001E7413 /* invalid-data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "invalid-data.png"; path = "../../../../Desktop/invalid-data.png"; sourceTree = "<group>"; };
+		7F030DC9242A88B3001E7413 /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
+		7F030DCD242A93CE001E7413 /* Processing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Processing.swift; sourceTree = "<group>"; };
+		7F030DD1242A94C3001E7413 /* Pipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipeable.swift; sourceTree = "<group>"; };
+		7F030DD8242A9965001E7413 /* mocks.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = mocks.generated.swift; path = Generated/mocks.generated.swift; sourceTree = SOURCE_ROOT; };
+		7F030DDB242A99AE001E7413 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
+		7F030DE1242AC088001E7413 /* valid-formatter-output.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "valid-formatter-output.txt"; sourceTree = "<group>"; };
 		7F5F5BDE24251BF500A0E227 /* NetDetective */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NetDetective; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5F5BE124251BF500A0E227 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7F5F5BEA24256D1400A0E227 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
@@ -60,11 +112,17 @@
 		7F5F5BF42426628B00A0E227 /* LaunchPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPath.swift; sourceTree = "<group>"; };
 		7F5F5BFF2426A9CA00A0E227 /* NetDetective.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetDetective.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5F5C012426A9CA00A0E227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F7E596F2426B79B00570561 /* nettop-test-output.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "nettop-test-output.txt"; sourceTree = "<group>"; };
 		7FD653BE2426AEBB0060F407 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7F030D8D242793B8001E7413 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F5F5BDB24251BF500A0E227 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -82,13 +140,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F030D91242793B8001E7413 /* NetDetectiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F030DC4242A5583001E7413 /* HandlerTests */,
+				7F030DC5242A5589001E7413 /* ModelTests */,
+				7F030DC6242A55B4001E7413 /* ExtensionsTests */,
+				7F030DB92427A211001E7413 /* Extensions */,
+				7F030DDA242A996B001E7413 /* Generated */,
+				7F030DB62427A0C5001E7413 /* Resources */,
+				7F030D94242793B8001E7413 /* Info.plist */,
+			);
+			path = NetDetectiveTests;
+			sourceTree = "<group>";
+		};
+		7F030DB62427A0C5001E7413 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F030DA3242796D7001E7413 /* valid-nettop-output.txt */,
+				7F030DB72427A0E2001E7413 /* invalid-nettop-output.txt */,
+				7F030DC02429FB97001E7413 /* no-bytes-nettop-output.txt */,
+				7F030DC22429FD73001E7413 /* no-processes-nettop-output.txt */,
+				7F030DE1242AC088001E7413 /* valid-formatter-output.txt */,
+				7F030DC7242A8893001E7413 /* invalid-data.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7F030DB92427A211001E7413 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F030DB124279CA2001E7413 /* StringExtensions.swift */,
+				7F030DC9242A88B3001E7413 /* NSImageExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		7F030DC4242A5583001E7413 /* HandlerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F030D92242793B8001E7413 /* DataHandlerTests.swift */,
+			);
+			name = HandlerTests;
+			sourceTree = "<group>";
+		};
+		7F030DC5242A5589001E7413 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F030DBA2427A24B001E7413 /* CommandTests.swift */,
+				7F030DBC2427A259001E7413 /* NetworkItemTests.swift */,
+			);
+			name = ModelTests;
+			sourceTree = "<group>";
+		};
+		7F030DC6242A55B4001E7413 /* ExtensionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F030DBE2427A264001E7413 /* FormatterTests.swift */,
+			);
+			name = ExtensionsTests;
+			sourceTree = "<group>";
+		};
+		7F030DD0242A93D6001E7413 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7F030DCD242A93CE001E7413 /* Processing.swift */,
+				7F030DD1242A94C3001E7413 /* Pipeable.swift */,
+				7F030DDB242A99AE001E7413 /* Mockable.swift */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		7F030DDA242A996B001E7413 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				7F030DD8242A9965001E7413 /* mocks.generated.swift */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
 		7F5F5BD524251BF500A0E227 = {
 			isa = PBXGroup;
 			children = (
 				7F5F5BE024251BF500A0E227 /* NetDetective */,
 				7F5F5C002426A9CA00A0E227 /* NetDetectiveBundle */,
+				7F030D91242793B8001E7413 /* NetDetectiveTests */,
 				7F5F5BDF24251BF500A0E227 /* Products */,
-				7F7E596F2426B79B00570561 /* nettop-test-output.txt */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +234,7 @@
 			children = (
 				7F5F5BDE24251BF500A0E227 /* NetDetective */,
 				7F5F5BFF2426A9CA00A0E227 /* NetDetective.bundle */,
+				7F030D90242793B8001E7413 /* NetDetectiveTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,6 +246,7 @@
 				7F5F5BE124251BF500A0E227 /* main.swift */,
 				7F5F5BFA24269BA200A0E227 /* Handler */,
 				7F5F5BF924269B8600A0E227 /* Model */,
+				7F030DD0242A93D6001E7413 /* Protocol */,
 				7F5F5BF824269B6C00A0E227 /* Extensions */,
 			);
 			path = NetDetective;
@@ -118,6 +257,7 @@
 			children = (
 				7F5F5BF024263A0700A0E227 /* FormatterExtensions.swift */,
 				7F5F5BF224264F8C00A0E227 /* FutureExtensions.swift */,
+				7F030DB324279F10001E7413 /* CompletionExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -151,10 +291,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7F030D8F242793B8001E7413 /* NetDetectiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F030D95242793B8001E7413 /* Build configuration list for PBXNativeTarget "NetDetectiveTests" */;
+			buildPhases = (
+				7F030DD7242A982A001E7413 /* sourcery */,
+				7F030D8C242793B8001E7413 /* Sources */,
+				7F030D8D242793B8001E7413 /* Frameworks */,
+				7F030D8E242793B8001E7413 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F030DA224279536001E7413 /* PBXTargetDependency */,
+			);
+			name = NetDetectiveTests;
+			productName = NetDetectiveTests;
+			productReference = 7F030D90242793B8001E7413 /* NetDetectiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7F5F5BDD24251BF500A0E227 /* NetDetective */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F5F5BE524251BF500A0E227 /* Build configuration list for PBXNativeTarget "NetDetective" */;
 			buildPhases = (
+				7F030DD5242A974D001E7413 /* swiftlint */,
 				7F5F5BDA24251BF500A0E227 /* Sources */,
 				7F5F5BDB24251BF500A0E227 /* Frameworks */,
 				7F5F5BDC24251BF500A0E227 /* CopyFiles */,
@@ -198,6 +358,9 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lee Arromba";
 				TargetAttributes = {
+					7F030D8F242793B8001E7413 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					7F5F5BDD24251BF500A0E227 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -221,11 +384,25 @@
 			targets = (
 				7F5F5BDD24251BF500A0E227 /* NetDetective */,
 				7F5F5BFE2426A9CA00A0E227 /* NetDetectiveBundle */,
+				7F030D8F242793B8001E7413 /* NetDetectiveTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7F030D8E242793B8001E7413 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F030DE2242AC088001E7413 /* valid-formatter-output.txt in Resources */,
+				7F030DAE24279BC0001E7413 /* valid-nettop-output.txt in Resources */,
+				7F030DC8242A8893001E7413 /* invalid-data.png in Resources */,
+				7F030DB82427A0E2001E7413 /* invalid-nettop-output.txt in Resources */,
+				7F030DC12429FB97001E7413 /* no-bytes-nettop-output.txt in Resources */,
+				7F030DC32429FD73001E7413 /* no-processes-nettop-output.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F5F5BFD2426A9CA00A0E227 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +413,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7F030DD5242A974D001E7413 /* swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${TRAVIS}\" = \"1\" ]; then\n    exit 0\nfi\nif which swiftlint >/dev/null; then\n    swiftlint autocorrect --config \".swiftlint.auto.yml\" && swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		7F030DD7242A982A001E7413 /* sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = sourcery;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${TRAVIS}\" = \"1\" ]; then\n    exit 0\nfi\nif which sourcery >/dev/null; then\n    sourcery\nelse\n    echo \"warning: Sourcery not installed, download from https://github.com/krzysztofzablocki/Sourcery\"\nfi\n";
+		};
 		7F5F5C092426AA0500A0E227 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,17 +469,45 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7F030D8C242793B8001E7413 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F030DB524279F10001E7413 /* CompletionExtensions.swift in Sources */,
+				7F030DBB2427A24B001E7413 /* CommandTests.swift in Sources */,
+				7F030DAA24279B23001E7413 /* FormatterExtensions.swift in Sources */,
+				7F030DB224279CA2001E7413 /* StringExtensions.swift in Sources */,
+				7F030DAB24279B25001E7413 /* FutureExtensions.swift in Sources */,
+				7F030D93242793B8001E7413 /* DataHandlerTests.swift in Sources */,
+				7F030DBF2427A264001E7413 /* FormatterTests.swift in Sources */,
+				7F030DCA242A88B3001E7413 /* NSImageExtensions.swift in Sources */,
+				7F030DE0242A9A65001E7413 /* Mockable.swift in Sources */,
+				7F030DDE242A9A49001E7413 /* Processing.swift in Sources */,
+				7F030DBD2427A259001E7413 /* NetworkItemTests.swift in Sources */,
+				7F030DA624279B09001E7413 /* DataHandler.swift in Sources */,
+				7F030DA724279B1B001E7413 /* Command.swift in Sources */,
+				7F030DD3242A94C3001E7413 /* Pipeable.swift in Sources */,
+				7F030DA824279B1D001E7413 /* LaunchPath.swift in Sources */,
+				7F030DD9242A9965001E7413 /* mocks.generated.swift in Sources */,
+				7F030DA924279B20001E7413 /* NetworkItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F5F5BDA24251BF500A0E227 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F030DDC242A99AE001E7413 /* Mockable.swift in Sources */,
 				7F5F5BEF2426237400A0E227 /* NetworkItem.swift in Sources */,
 				7F5F5BF124263A0700A0E227 /* FormatterExtensions.swift in Sources */,
 				7F5F5BE224251BF500A0E227 /* main.swift in Sources */,
+				7F030DD2242A94C3001E7413 /* Pipeable.swift in Sources */,
 				7F5F5BEB24256D1400A0E227 /* Command.swift in Sources */,
 				7F5F5BF324264F8C00A0E227 /* FutureExtensions.swift in Sources */,
 				7F5F5BED242573F800A0E227 /* DataHandler.swift in Sources */,
 				7F5F5BF52426628B00A0E227 /* LaunchPath.swift in Sources */,
+				7F030DCE242A93CE001E7413 /* Processing.swift in Sources */,
+				7F030DB424279F10001E7413 /* CompletionExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +521,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7F030DA224279536001E7413 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F5F5BDD24251BF500A0E227 /* NetDetective */;
+			targetProxy = 7F030DA124279536001E7413 /* PBXContainerItemProxy */;
+		};
 		7F5F5C062426A9DA00A0E227 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7F5F5BDD24251BF500A0E227 /* NetDetective */;
@@ -288,6 +534,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		7F030D96242793B8001E7413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				INFOPLIST_FILE = NetDetectiveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.NetDetectiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7F030D97242793B8001E7413 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				INFOPLIST_FILE = NetDetectiveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.NetDetectiveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		7F5F5BE324251BF500A0E227 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -456,6 +738,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7F030D95242793B8001E7413 /* Build configuration list for PBXNativeTarget "NetDetectiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F030D96242793B8001E7413 /* Debug */,
+				7F030D97242793B8001E7413 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7F5F5BD924251BF500A0E227 /* Build configuration list for PBXProject "NetDetective" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

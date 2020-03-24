@@ -8,11 +8,21 @@
 
 NetDetective is a simple Mac command line app that generates a snapshot of any processes sending / receiving data from your computer. This helps you to quickly identify any potential Spyware.
 
-## Dependencies
+## Installation from Source
 
-1. `nettop` - bundled with `macOS`
+**SwiftLint**
 
-## Installation
+`brew install swiftlint`
+
+**Sourcery** *(testing only)*
+
+`brew install sourcery`
+
+**nettop**
+
+bundled with `macOS`
+
+### Build Instructions
 
 1. Clone the repository
 
@@ -26,7 +36,7 @@ git clone https://github.com/larromba/NetDetective.git
 usr/local/bin
 ```
 
-## Uninstallation
+### Uninstallation
 
 ```bash
 rm /usr/local/bin/net-detective
@@ -77,5 +87,4 @@ When rebuilding to `usr/local/bin`, sometimes an XCode clean (`cmd+shift+K`) and
 larromba@gmail.com
 
 ## Future work
-1. unit tests
-2. accept input parameters to customise functionality
+1. accept input parameters to customise functionality

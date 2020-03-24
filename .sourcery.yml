@@ -1,0 +1,6 @@
+sources:
+  - ./NetDetective
+templates:
+  - ./Templates
+output:
+  ./Generated
