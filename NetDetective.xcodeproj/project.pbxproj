@@ -10,6 +10,7 @@
 		7F030D93242793B8001E7413 /* DataHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F030D92242793B8001E7413 /* DataHandlerTests.swift */; };
 		7F030DA624279B09001E7413 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BEC242573F800A0E227 /* DataHandler.swift */; };
 		7F030DA724279B1B001E7413 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BEA24256D1400A0E227 /* Command.swift */; };
+		7F030DA824279B1D001E7413 /* LaunchPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BF42426628B00A0E227 /* LaunchPath.swift */; };
 		7F030DA924279B20001E7413 /* NetworkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BEE2426237400A0E227 /* NetworkItem.swift */; };
 		7F030DAA24279B23001E7413 /* FormatterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BF024263A0700A0E227 /* FormatterExtensions.swift */; };
 		7F030DAB24279B25001E7413 /* FutureExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BF224264F8C00A0E227 /* FutureExtensions.swift */; };
