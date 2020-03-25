@@ -2,7 +2,7 @@
 
 | master  | dev |
 | ------------- | ------------- |
-| [![Build Status](https://travis-ci.com/larromba/NetDetective.svg?branch=master)](https://travis-ci.com/larromba/NetDetective) | [![Build Status](https://travis-ci.com/larromba/NetDetective.svg?branch=dev)](https://travis-ci.com/larromba/NetDetective) |
+| [![Build Status](https://travis-ci.com/larromba/NetDetective.svg?branch=master)](https://travis-ci.com/larromba/NetDetective) | [![Build Status](https://travis-ci.com/larromba/NetDetective.svg?branch=develop)](https://travis-ci.com/larromba/NetDetective) |
 
 These builds will currently fail as this project uses `Combine`, which is only available from `macOS 10.15`. Travis CI currently only supports `macOS 10.14`.
 
