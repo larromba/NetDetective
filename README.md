@@ -36,7 +36,7 @@ git clone https://github.com/larromba/NetDetective.git
 usr/local/bin
 ```
 
-### Uninstallation
+## Uninstallation
 
 ```bash
 rm /usr/local/bin/net-detective
@@ -48,7 +48,7 @@ rm /usr/local/bin/net-detective
 net-detective
 ```
 
-## Example output
+### Example output
 
 ```bash
 PROCESS              IN             OUT            MORE INFO...

@@ -1,7 +1,7 @@
 import XCTest
 
 final class NetworkItemTests: XCTestCase {
-    func testValidData() {
+    func testNetWorkItemOutputsWhenGivenValidData() {
         // sut
         let item = try? NetworkItem(data: "12:09:02.247187,systemstats.154,2000,10000000,")
 
@@ -15,37 +15,37 @@ final class NetworkItemTests: XCTestCase {
         XCTAssertEqual(item?.bytesOutFormatted, "9.5 MB")
     }
 
-    func testTooFewItemsThrowsError() {
+    func testNetworkItemThrowsErrorWhenGivenTooFewItems() {
         // test
-        XCTAssertThrowsError(try NetworkItem(data: "12:09:02.247187"), "", { error in
-            guard case NetworkItem.InitError.invalidItemCount(_, _, _) = error else {
-                XCTFail("received unexpected error \(error)")
+        XCTAssertThrowsError(try NetworkItem(data: "12:09:02.247187"), "", {
+            guard case NetworkItem.InitError.invalidItemCount(_, _, _) = $0 else {
+                XCTFail(.unexpectedError($0))
                 return
             }
         })
     }
 
-    func testTooMayItemsThrowsError() {
+    func testNetworkItemThrowsErrorWhenGivenTooManyItems() {
         // test
-        XCTAssertThrowsError(try NetworkItem(data: "12:09:02.247187,systemstats.154,0,0,0,0"), "", { error in
-            guard case NetworkItem.InitError.invalidItemCount(_, _, _) = error else {
-                XCTFail("received unexpected error \(error)")
+        XCTAssertThrowsError(try NetworkItem(data: "12:09:02.247187,systemstats.154,0,0,0,0"), "", {
+            guard case NetworkItem.InitError.invalidItemCount(_, _, _) = $0 else {
+                XCTFail(.unexpectedError($0))
                 return
             }
         })
     }
 
-    func testInvalidTimeThrowsInvalidDateError() {
+    func testNetworkItemThrowsErrorWhenGivenInvalidDate() {
         // test
-        XCTAssertThrowsError(try NetworkItem(data: "12:09:02,systemstats.154,0,0,"), "", { error in
-            guard case NetworkItem.InitError.invalidTime(_, _) = error else {
-                XCTFail("received unexpected error \(error)")
+        XCTAssertThrowsError(try NetworkItem(data: "12:09:02,systemstats.154,0,0,"), "", {
+            guard case NetworkItem.InitError.invalidTime(_, _) = $0 else {
+                XCTFail(.unexpectedError($0))
                 return
             }
         })
     }
 
-    func testBytesMissingZerosBytes() {
+    func testNetworkItemZerosBytesWhenMissing() {
         // sut
         var item = try? NetworkItem(data: "12:09:02.247187,systemstats.154")
         // test
@@ -65,24 +65,24 @@ final class NetworkItemTests: XCTestCase {
         XCTAssertEqual(item?.bytesOut, 0)
     }
 
-    func testInvalidBytesThrowsError() {
+    func testNetworkItemThrowsErrorWhenGivenInvalidByte() {
         // test
-        XCTAssertThrowsError(try NetworkItem(data: "12:09:02.247187,systemstats.154,z,0,"), "", { error in
-            guard case NetworkItem.InitError.invalidBytes(_, _) = error else {
-                XCTFail("received unexpected error \(error)")
+        XCTAssertThrowsError(try NetworkItem(data: "12:09:02.247187,systemstats.154,z,0,"), "", {
+            guard case NetworkItem.InitError.invalidByte(_, _) = $0 else {
+                XCTFail(.unexpectedError($0))
                 return
             }
         })
         // test
-        XCTAssertThrowsError(try NetworkItem(data: "12:09:02.247187,systemstats.154,0,z,"), "", { error in
-            guard case NetworkItem.InitError.invalidBytes(_, _) = error else {
-                XCTFail("received unexpected error \(error)")
+        XCTAssertThrowsError(try NetworkItem(data: "12:09:02.247187,systemstats.154,0,z,"), "", {
+            guard case NetworkItem.InitError.invalidByte(_, _) = $0 else {
+                XCTFail(.unexpectedError($0))
                 return
             }
         })
     }
 
-    func testMaxBytesAgnosticIsAlwaysGreatestByteValue() {
+    func testNetworkItemCorrectlyChoosesLargestByteValue() {
         // sut
         var item = try? NetworkItem(data: "12:09:02.247187,systemstats.154,20,30")
         // test

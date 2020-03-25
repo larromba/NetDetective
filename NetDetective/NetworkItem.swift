@@ -4,7 +4,7 @@ struct NetworkItem {
     enum InitError: Error {
         case invalidItemCount(expected: String, count: Int, inData: String)
         case invalidTime(time: String, inData: String)
-        case invalidBytes(bytes: String, inData: String)
+        case invalidByte(byte: String, inData: String)
     }
 
     var time: Date
@@ -22,8 +22,8 @@ struct NetworkItem {
         name = String(items[1])
 
         let bytes = try NetworkItem.bytes(for: items, in: data)
-        bytesIn = bytes.0
-        bytesOut = bytes.1
+        bytesIn = bytes.byteIn
+        bytesOut = bytes.byteOut
     }
 
     // MARK: - private
@@ -38,7 +38,7 @@ struct NetworkItem {
         return date
     }
 
-    private static func bytes(for items: [String], in data: String) throws -> (Int, Int) {
+    private static func bytes(for items: [String], in data: String) throws -> (byteIn: Int, byteOut: Int) {
         if items.count == 2 {
             return (0, 0)
         }
@@ -54,10 +54,10 @@ struct NetworkItem {
         if item.isEmpty {
             return 0
         }
-        guard let bytes = Int(item) else {
-            throw InitError.invalidBytes(bytes: item, inData: data)
+        guard let byte = Int(item) else {
+            throw InitError.invalidByte(byte: item, inData: data)
         }
-        return bytes
+        return byte
     }
 }
 

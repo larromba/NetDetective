@@ -12,9 +12,9 @@ extension Formatter {
             return .success("no processes are sending or receiving data")
         }
         do {
-            let column1Length = try self.column1Length(from: items)
-            let column2Length = try self.column2Length(from: items)
-            let column3Length = try self.column3Length(from: items)
+            let column1Length = try columnLength(from: items, keyPath: \NetworkItem.name)
+            let column2Length = try columnLength(from: items, keyPath: \NetworkItem.bytesInFormatted)
+            let column3Length = try columnLength(from: items, keyPath: \NetworkItem.bytesOutFormatted)
             let format = "%-\(column1Length)s %-\(column2Length)s %-\(column3Length)s %@\n"
             var output = String(format: format,
                                 try "PROCESS".cString(),
@@ -36,22 +36,8 @@ extension Formatter {
 
     // MARK: - private
 
-    private static func column1Length(from items: [NetworkItem]) throws -> Int {
-        var strings = items.map { $0.nameFormatted }
-        strings = strings.sorted(by: { $0.count > $1.count })
-        guard let length = strings.first?.count else { throw StringFormatError.length }
-        return length + 5
-    }
-
-    private static func column2Length(from items: [NetworkItem]) throws -> Int {
-        var strings = items.map { $0.bytesInFormatted }
-        strings = strings.sorted(by: { $0.count > $1.count })
-        guard let length = strings.first?.count else { throw StringFormatError.length }
-        return length + 5
-    }
-
-    private static func column3Length(from items: [NetworkItem]) throws -> Int {
-        var strings = items.map { $0.bytesOutFormatted }
+    private static func columnLength(from items: [NetworkItem], keyPath: KeyPath<NetworkItem, String>) throws -> Int {
+        var strings = items.map { $0[keyPath: keyPath] }
         strings = strings.sorted(by: { $0.count > $1.count })
         guard let length = strings.first?.count else { throw StringFormatError.length }
         return length + 5
