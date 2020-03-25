@@ -45,7 +45,6 @@
 		7FBB4C27242B66E20037E8BD /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB4C26242B66E20037E8BD /* IntExtensions.swift */; };
 		7FBB4C29242B74B70037E8BD /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB4C28242B74B70037E8BD /* Keys.swift */; };
 		7FBB4C2A242B74B70037E8BD /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB4C28242B74B70037E8BD /* Keys.swift */; };
-		7FBB4C2F242B7EFC0037E8BD /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBB4C2E242B7EFC0037E8BD /* Combine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,7 +128,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FBB4C2F242B7EFC0037E8BD /* Combine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,7 +568,6 @@
 		7F030D96242793B8001E7413 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
@@ -589,7 +586,6 @@
 		7F030D97242793B8001E7413 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
@@ -724,10 +720,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
 				ENABLE_HARDENED_RUNTIME = YES;
-				OTHER_LDFLAGS = (
-					"-weak_framework",
-					Combine,
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -739,10 +731,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
 				ENABLE_HARDENED_RUNTIME = YES;
-				OTHER_LDFLAGS = (
-					"-weak_framework",
-					Combine,
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
