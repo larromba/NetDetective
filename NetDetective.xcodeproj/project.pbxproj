@@ -45,6 +45,7 @@
 		7FBB4C27242B66E20037E8BD /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB4C26242B66E20037E8BD /* IntExtensions.swift */; };
 		7FBB4C29242B74B70037E8BD /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB4C28242B74B70037E8BD /* Keys.swift */; };
 		7FBB4C2A242B74B70037E8BD /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB4C28242B74B70037E8BD /* Keys.swift */; };
+		7FBB4C2F242B7EFC0037E8BD /* Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBB4C2E242B7EFC0037E8BD /* Combine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,8 @@
 		7F5F5C012426A9CA00A0E227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FBB4C26242B66E20037E8BD /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
 		7FBB4C28242B74B70037E8BD /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		7FBB4C2C242B7EF60037E8BD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		7FBB4C2E242B7EFC0037E8BD /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/Combine.framework; sourceTree = DEVELOPER_DIR; };
 		7FD653BE2426AEBB0060F407 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -126,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FBB4C2F242B7EFC0037E8BD /* Combine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +233,7 @@
 				7F5F5C002426A9CA00A0E227 /* NetDetectiveBundle */,
 				7F030D91242793B8001E7413 /* NetDetectiveTests */,
 				7F5F5BDF24251BF500A0E227 /* Products */,
+				7FBB4C2B242B7EF60037E8BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -302,6 +307,15 @@
 				7F030DC22429FD73001E7413 /* no-processes-nettop-input.txt */,
 			);
 			name = nettop;
+			sourceTree = "<group>";
+		};
+		7FBB4C2B242B7EF60037E8BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FBB4C2E242B7EFC0037E8BD /* Combine.framework */,
+				7FBB4C2C242B7EF60037E8BD /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
