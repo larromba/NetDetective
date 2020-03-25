@@ -80,6 +80,15 @@ max bytes   ->      min bytes
 
 When rebuilding to `usr/local/bin`, sometimes an XCode clean (`cmd+shift+K`) and uninstall *(see Uninstallation section above)* is first needed.
 
+2. `___llvm_profile_runtime_user`
+
+
+Try removing derived data: 
+
+```bash
+rm rf ~/Library/Developer/Xcode/DerivedData/NetDetective
+```
+
 ## Licence
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 

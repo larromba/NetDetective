@@ -3,15 +3,17 @@ import Foundation
 struct NetworkItem {
     enum InitError: Error {
         case invalidItemCount(expected: String, count: Int, inData: String)
-        case invalidTime(time: String, inData: String)
-        case invalidByte(byte: String, inData: String)
+        case invalidTime(_ time: String, inData: String)
+        case invalidByte(_ byte: String, inData: String)
+        case invalidURL(_ url: String, inData: String)
     }
 
-    var time: Date
-    var name: String
-    var bytesIn: Int
-    var bytesOut: Int
-    var subItems = [NetworkItem]()
+    let time: Date
+    let name: String
+    let bytesIn: Int
+    let bytesOut: Int
+    private(set) var infoURL: URL! // optional as need to access self before setting
+    private(set) var subItems = [NetworkItem]()
 
     init(data: String) throws {
         let items = data.split(separator: ",").map { String($0) }
@@ -24,6 +26,17 @@ struct NetworkItem {
         let bytes = try NetworkItem.bytes(for: items, in: data)
         bytesIn = bytes.byteIn
         bytesOut = bytes.byteOut
+
+        let urlString = "https://www.google.com/search?q=what+is+\(nameFormatted)"
+        guard let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+            let url = URL(string: encodedUrlString) else {
+                throw InitError.invalidURL(urlString, inData: data)
+        }
+        infoURL = url
+    }
+
+    mutating func setSubItems(_ value: [NetworkItem]) {
+        subItems = value
     }
 
     // MARK: - private
@@ -33,7 +46,7 @@ struct NetworkItem {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss.SSSSSS"
         guard let date = dateFormatter.date(from: item) else {
-            throw InitError.invalidTime(time: item, inData: data)
+            throw InitError.invalidTime(item, inData: data)
         }
         return date
     }
@@ -55,7 +68,7 @@ struct NetworkItem {
             return 0
         }
         guard let byte = Int(item) else {
-            throw InitError.invalidByte(byte: item, inData: data)
+            throw InitError.invalidByte(item, inData: data)
         }
         return byte
     }

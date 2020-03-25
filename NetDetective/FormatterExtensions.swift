@@ -26,8 +26,11 @@ extension Formatter {
                                      try $0.nameFormatted.cString(),
                                      try $0.bytesInFormatted.cString(),
                                      try $0.bytesOutFormatted.cString(),
-                                     "https://www.google.com/search?q=what+is+\($0.nameFormatted)"))
+                                     $0.infoURL.absoluteString))
             }
+            output.append("\nopen links with:\n")
+            output.append("1. select all: cmd+shift+click [x2]\n")
+            output.append("2. open link:  shift+click     [x2]\n")
             return .success(output)
         } catch {
             return .failure(error)

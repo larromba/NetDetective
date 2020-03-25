@@ -34,7 +34,7 @@ struct DataHandler {
         var hierachy = [NetworkItem]()
         while !items.isEmpty {
             var topItem = items.remove(at: 0)
-            topItem.subItems = items.nextSubItems()
+            topItem.setSubItems(items.nextSubItems())
             hierachy.append(topItem)
         }
         return hierachy

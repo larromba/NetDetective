@@ -21,7 +21,7 @@ final class Command: Commanding {
         notificationCenter.publisher(for: .NSFileHandleReadToEndOfFileCompletion,
                                      object: output.fileHandleForReading)
         .tryMap { notification -> String in
-            if let errorNumber = notification.userInfo?["NSFileHandleError"] as? NSNumber {
+            if let errorNumber = notification.userInfo?[.fileHandlerErrorKey] as? NSNumber {
                 throw ProcessError.failed(code: errorNumber.intValue)
             }
             guard let item = notification.userInfo?[NSFileHandleNotificationDataItem] as? Data else {

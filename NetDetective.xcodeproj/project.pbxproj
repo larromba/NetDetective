@@ -43,6 +43,8 @@
 		7F5F5BF52426628B00A0E227 /* LaunchPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5F5BF42426628B00A0E227 /* LaunchPath.swift */; };
 		7F5F5C082426A9F500A0E227 /* NetDetective in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F5F5BDE24251BF500A0E227 /* NetDetective */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7FBB4C27242B66E20037E8BD /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB4C26242B66E20037E8BD /* IntExtensions.swift */; };
+		7FBB4C29242B74B70037E8BD /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB4C28242B74B70037E8BD /* Keys.swift */; };
+		7FBB4C2A242B74B70037E8BD /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBB4C28242B74B70037E8BD /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +117,7 @@
 		7F5F5BFF2426A9CA00A0E227 /* NetDetective.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetDetective.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F5F5C012426A9CA00A0E227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FBB4C26242B66E20037E8BD /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
+		7FBB4C28242B74B70037E8BD /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		7FD653BE2426AEBB0060F407 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -269,6 +272,7 @@
 				7F5F5BEA24256D1400A0E227 /* Command.swift */,
 				7F5F5BF42426628B00A0E227 /* LaunchPath.swift */,
 				7F5F5BEE2426237400A0E227 /* NetworkItem.swift */,
+				7FBB4C28242B74B70037E8BD /* Keys.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -492,6 +496,7 @@
 				7F030DAB24279B25001E7413 /* FutureExtensions.swift in Sources */,
 				7F030D93242793B8001E7413 /* DataHandlerTests.swift in Sources */,
 				7F030DBF2427A264001E7413 /* FormatterTests.swift in Sources */,
+				7FBB4C2A242B74B70037E8BD /* Keys.swift in Sources */,
 				7F030DCA242A88B3001E7413 /* NSImageExtensions.swift in Sources */,
 				7F030DE0242A9A65001E7413 /* Mockable.swift in Sources */,
 				7F030DDE242A9A49001E7413 /* Processing.swift in Sources */,
@@ -513,6 +518,7 @@
 				7F5F5BEF2426237400A0E227 /* NetworkItem.swift in Sources */,
 				7F5F5BF124263A0700A0E227 /* FormatterExtensions.swift in Sources */,
 				7F5F5BE224251BF500A0E227 /* main.swift in Sources */,
+				7FBB4C29242B74B70037E8BD /* Keys.swift in Sources */,
 				7F030DD2242A94C3001E7413 /* Pipeable.swift in Sources */,
 				7F5F5BEB24256D1400A0E227 /* Command.swift in Sources */,
 				7F5F5BF324264F8C00A0E227 /* FutureExtensions.swift in Sources */,
@@ -702,6 +708,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					Combine,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -713,6 +723,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
 				ENABLE_HARDENED_RUNTIME = YES;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					Combine,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

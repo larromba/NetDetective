@@ -45,7 +45,7 @@ final class CommandTests: XCTestCase {
         let notification = Notification(
             name: .NSFileHandleReadToEndOfFileCompletion,
             object: output.fileHandleForReading,
-            userInfo: ["NSFileHandleError": code]
+            userInfo: [.fileHandlerErrorKey: code]
         )
         notificationCenter.post(notification)
 
