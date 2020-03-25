@@ -3,15 +3,17 @@ import Foundation
 struct NetworkItem {
     enum InitError: Error {
         case invalidItemCount(expected: String, count: Int, inData: String)
-        case invalidTime(time: String, inData: String)
-        case invalidBytes(bytes: String, inData: String)
+        case invalidTime(_ time: String, inData: String)
+        case invalidByte(_ byte: String, inData: String)
+        case invalidURL(_ url: String, inData: String)
     }
 
-    var time: Date
-    var name: String
-    var bytesIn: Int
-    var bytesOut: Int
-    var subItems = [NetworkItem]()
+    let time: Date
+    let name: String
+    let bytesIn: Int
+    let bytesOut: Int
+    private(set) var infoURL: URL! // optional as need to access self before setting
+    private(set) var subItems = [NetworkItem]()
 
     init(data: String) throws {
         let items = data.split(separator: ",").map { String($0) }
@@ -22,8 +24,19 @@ struct NetworkItem {
         name = String(items[1])
 
         let bytes = try NetworkItem.bytes(for: items, in: data)
-        bytesIn = bytes.0
-        bytesOut = bytes.1
+        bytesIn = bytes.byteIn
+        bytesOut = bytes.byteOut
+
+        let urlString = "https://www.google.com/search?q=what+is+\(nameFormatted)"
+        guard let encodedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+            let url = URL(string: encodedUrlString) else {
+                throw InitError.invalidURL(urlString, inData: data)
+        }
+        infoURL = url
+    }
+
+    mutating func setSubItems(_ value: [NetworkItem]) {
+        subItems = value
     }
 
     // MARK: - private
@@ -33,12 +46,12 @@ struct NetworkItem {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss.SSSSSS"
         guard let date = dateFormatter.date(from: item) else {
-            throw InitError.invalidTime(time: item, inData: data)
+            throw InitError.invalidTime(item, inData: data)
         }
         return date
     }
 
-    private static func bytes(for items: [String], in data: String) throws -> (Int, Int) {
+    private static func bytes(for items: [String], in data: String) throws -> (byteIn: Int, byteOut: Int) {
         if items.count == 2 {
             return (0, 0)
         }
@@ -54,10 +67,10 @@ struct NetworkItem {
         if item.isEmpty {
             return 0
         }
-        guard let bytes = Int(item) else {
-            throw InitError.invalidBytes(bytes: item, inData: data)
+        guard let byte = Int(item) else {
+            throw InitError.invalidByte(item, inData: data)
         }
-        return bytes
+        return byte
     }
 }
 

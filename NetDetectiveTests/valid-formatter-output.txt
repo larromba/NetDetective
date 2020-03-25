@@ -1,4 +1,8 @@
-PROCESS             IN               OUT         MORE INFO...
-systemstats         1,000 bytes      -           https://www.google.com/search?q=what+is+systemstats
-udp4 *:*<->*:*      -                -           https://www.google.com/search?q=what+is+udp4 *:*<->*:*
-configd             -                977 KB      https://www.google.com/search?q=what+is+configd
+PROCESS              IN               OUT         MORE INFO...
+systemstats          1,000 bytes      -           https://www.google.com/search?q=what+is+systemstats
+udp4 *:*<->*:*       -                -           https://www.google.com/search?q=what+is+udp4%20*:*%3C-%3E*:*
+configd              -                977 KB      https://www.google.com/search?q=what+is+configd
+
+open links with:
+1. select all: cmd+shift+click [x2]
+2. open link:  shift+click     [x2]

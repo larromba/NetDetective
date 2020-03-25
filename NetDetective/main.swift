@@ -10,11 +10,11 @@ command.publisher
     .sink(receiveCompletion: {
         if let error = $0.error {
             print(error.localizedDescription)
-            exit(-1)
+            exit(.failure)
         }
     }, receiveValue: {
         print($0)
-        exit(0)
+        exit(.success)
     })
     .store(in: &cancellable)
 command.launch()

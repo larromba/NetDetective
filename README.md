@@ -2,7 +2,12 @@
 
 | master  | dev |
 | ------------- | ------------- |
-| [![Build Status](https://travis-ci.com/larromba/NetDetective.svg?branch=master)](https://travis-ci.com/larromba/NetDetective) | [![Build Status](https://travis-ci.com/larromba/NetDetective.svg?branch=dev)](https://travis-ci.com/larromba/NetDetective) |
+| [![Build Status](https://travis-ci.com/larromba/NetDetective.svg?branch=master)](https://travis-ci.com/larromba/NetDetective) | [![Build Status](https://travis-ci.com/larromba/NetDetective.svg?branch=develop)](https://travis-ci.com/larromba/NetDetective) |
+
+These builds will currently fail as this project uses `Combine`, which is only available from `macOS 10.15`. Travis CI currently only supports `macOS 10.14`.
+
+1. [Travis CI - 10.15 Discussion](https://travis-ci.community/t/macos-catalina-build-environment/5608/11)
+2. [Travis CI - Supported macOS Versions](https://docs.travis-ci.com/user/reference/osx/#macos-version)
 
 ## About
 
@@ -36,7 +41,7 @@ git clone https://github.com/larromba/NetDetective.git
 usr/local/bin
 ```
 
-### Uninstallation
+## Uninstallation
 
 ```bash
 rm /usr/local/bin/net-detective
@@ -48,7 +53,7 @@ rm /usr/local/bin/net-detective
 net-detective
 ```
 
-## Example output
+### Example output
 
 ```bash
 PROCESS              IN             OUT            MORE INFO...
@@ -79,6 +84,15 @@ max bytes   ->      min bytes
 
 
 When rebuilding to `usr/local/bin`, sometimes an XCode clean (`cmd+shift+K`) and uninstall *(see Uninstallation section above)* is first needed.
+
+2. `___llvm_profile_runtime_user`
+
+
+Try removing derived data: 
+
+```bash
+rm rf ~/Library/Developer/Xcode/DerivedData/NetDetective
+```
 
 ## Licence
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)

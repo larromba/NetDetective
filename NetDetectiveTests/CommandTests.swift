@@ -27,25 +27,25 @@ final class CommandTests: XCTestCase {
         super.tearDown()
     }
 
-    func testCommandCanHandleSystemError() {
+    func testCommandThrowsErrorWhenReceivesSystemError() {
         // mocks
-        let expectation = self.expectation(description: "can handle system error")
+        let expectation = self.expectation(description: "throws error")
         let code = 999
         command.publisher.sink(receiveCompletion: {
             if case Command.ProcessError.failed(999)? = $0.error {
                 expectation.fulfill()
             } else {
-                XCTFail("received unexpected error \(String(describing: $0.error))")
+                XCTFail(.unexpectedError($0.error))
             }
-        }, receiveValue: { value in
-            XCTFail("received unexpected value \(value)")
+        }, receiveValue: {
+            XCTFail(.unexpectedValue($0))
         }).store(in: &cancellable)
 
         // sut
         let notification = Notification(
             name: .NSFileHandleReadToEndOfFileCompletion,
             object: output.fileHandleForReading,
-            userInfo: ["NSFileHandleError": code]
+            userInfo: [.fileHandlerErrorKey: code]
         )
         notificationCenter.post(notification)
 
@@ -53,17 +53,17 @@ final class CommandTests: XCTestCase {
         waitForExpectations(timeout: 0.1) { XCTAssertNil($0) }
     }
 
-    func testCommandCanHandleMissingData() {
+    func testCommandThrowsErrorWhenReceivesMissingData() {
         // mocks
-        let expectation = self.expectation(description: "can handle missing or invalid data")
+        let expectation = self.expectation(description: "throws error")
         command.publisher.sink(receiveCompletion: {
             if case Command.ProcessError.missingData? = $0.error {
                 expectation.fulfill()
             } else {
-                XCTFail("received unexpected error \(String(describing: $0.error))")
+                XCTFail(.unexpectedError($0.error))
             }
-        }, receiveValue: { value in
-            XCTFail("received unexpected value \(value)")
+        }, receiveValue: {
+            XCTFail(.unexpectedValue($0))
         }).store(in: &cancellable)
 
         // sut
@@ -78,17 +78,17 @@ final class CommandTests: XCTestCase {
         waitForExpectations(timeout: 0.1) { XCTAssertNil($0) }
     }
 
-    func testCommandCanHandleInvalidString() {
+    func testCommandThrowsErrorWhenReceivesInvalidString() {
         // mocks
-        let expectation = self.expectation(description: "can handle invalid string")
+        let expectation = self.expectation(description: "throws error")
         command.publisher.sink(receiveCompletion: {
             if case Command.ProcessError.invalidString? = $0.error {
                 expectation.fulfill()
             } else {
-                XCTFail("received unexpected error \(String(describing: $0.error))")
+                XCTFail(.unexpectedError($0.error))
             }
-        }, receiveValue: { value in
-            XCTFail("received unexpected value \(value)")
+        }, receiveValue: {
+            XCTFail(.unexpectedValue($0))
         }).store(in: &cancellable)
 
         // sut
@@ -103,7 +103,7 @@ final class CommandTests: XCTestCase {
         waitForExpectations(timeout: 0.1) { XCTAssertNil($0) }
     }
 
-    func testCommandProcessLaunchesAndWaits() {
+    func testCommandProcessLaunchesAndWaitsWhenLaunchCalled() {
         // sut
         command.launch()
 
@@ -112,7 +112,7 @@ final class CommandTests: XCTestCase {
         XCTAssertTrue(process.invocations.isInvoked(MockProcess.waitUntilExit2.name))
     }
 
-    func testCommandProcessHasOutput() {
+    func testCommandProcessHasOutputWhenLaunchCalled() {
         // sut
         command.launch()
 
