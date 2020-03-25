@@ -96,7 +96,7 @@
 		7F030DBE2427A264001E7413 /* FormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
 		7F030DC02429FB97001E7413 /* no-bytes-nettop-output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "no-bytes-nettop-output.txt"; sourceTree = "<group>"; };
 		7F030DC22429FD73001E7413 /* no-processes-nettop-output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "no-processes-nettop-output.txt"; sourceTree = "<group>"; };
-		7F030DC7242A8893001E7413 /* invalid-data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "invalid-data.png"; path = "../../../../Desktop/invalid-data.png"; sourceTree = "<group>"; };
+		7F030DC7242A8893001E7413 /* invalid-data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "invalid-data.png"; sourceTree = "<group>"; };
 		7F030DC9242A88B3001E7413 /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
 		7F030DCD242A93CE001E7413 /* Processing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Processing.swift; sourceTree = "<group>"; };
 		7F030DD1242A94C3001E7413 /* Pipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipeable.swift; sourceTree = "<group>"; };
