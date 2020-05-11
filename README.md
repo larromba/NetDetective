@@ -4,11 +4,6 @@
 | ------------- | ------------- |
 | [![Build Status](https://travis-ci.com/larromba/NetDetective.svg?branch=master)](https://travis-ci.com/larromba/NetDetective) | [![Build Status](https://travis-ci.com/larromba/NetDetective.svg?branch=develop)](https://travis-ci.com/larromba/NetDetective) |
 
-These builds will currently fail as this project uses `Combine`, which is only available from `macOS 10.15`. Travis CI currently only supports `macOS 10.14`.
-
-1. [Travis CI - 10.15 Discussion](https://travis-ci.community/t/macos-catalina-build-environment/5608/11)
-2. [Travis CI - Supported macOS Versions](https://docs.travis-ci.com/user/reference/osx/#macos-version)
-
 ## About
 
 NetDetective is a simple Mac command line app that generates a snapshot of any processes sending / receiving data from your computer. This helps you to quickly identify any potential Spyware.
