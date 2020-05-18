@@ -14,7 +14,7 @@ final class DataHandlerTests: XCTestCase {
         super.tearDown()
     }
 
-    func testDataHandlerReturnsItemsWhenGivenValidInput() {
+    func test_dataHandler_whenGivenValidInput_expectItemsReturned() {
         // mocks
         let expectation = self.expectation(description: "returns items")
 
@@ -30,7 +30,7 @@ final class DataHandlerTests: XCTestCase {
         waitForExpectations(timeout: 0.1) { XCTAssertNil($0) }
     }
 
-    func testDataHandlerThrowsErrorWhenGivenInvalidNettopInput() {
+    func test_dataHandler_whenGivenInvalidInput_expectError() {
         // mocks
         let expectation = self.expectation(description: "throws error")
 
@@ -49,7 +49,7 @@ final class DataHandlerTests: XCTestCase {
         waitForExpectations(timeout: 0.1) { XCTAssertNil($0) }
     }
 
-    func testDataHandlerFiltersOutProcessesWithZeroBytes() {
+    func test_dataHandler_whenGiven0ByteProcesses_expectProcessesFilteredOut() {
         // mocks
         let expectation = self.expectation(description: "0 byte processes filtered out")
 
@@ -66,7 +66,7 @@ final class DataHandlerTests: XCTestCase {
         waitForExpectations(timeout: 0.1) { XCTAssertNil($0) }
     }
 
-    func testDataHandlerSortsProcessesMaxToMinBytes() {
+    func test_dataHandler_whenGivenValidInput_expectProcessesSortedMaxToMinBytes() {
         // mocks
         let expectation = self.expectation(description: "processes sorted +(top) -(bottom)")
 
@@ -83,7 +83,7 @@ final class DataHandlerTests: XCTestCase {
         waitForExpectations(timeout: 0.1) { XCTAssertNil($0) }
     }
 
-    func testDataHandlerReturnsNoItemsWhenGivenNoProcesses() {
+    func test_dataHandler_whenGivenNoProcesses_expectNoItems() {
         // mocks
         let expectation = self.expectation(description: "returns no items")
 

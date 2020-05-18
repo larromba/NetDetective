@@ -1,7 +1,7 @@
 import XCTest
 
 final class NetworkItemTests: XCTestCase {
-    func testNetWorkItemOutputsWhenGivenValidData() {
+    func test_networkItem_whenGivenValidData_expectCorrectOutput() {
         // sut
         let item = try? NetworkItem(data: "12:09:02.247187,systemstats.154,2000,10000000,")
 
@@ -15,7 +15,7 @@ final class NetworkItemTests: XCTestCase {
         XCTAssertEqual(item?.bytesOutFormatted, "9.5 MB")
     }
 
-    func testNetworkItemThrowsErrorWhenGivenTooFewItems() {
+    func test_networkItem_whenGivenTooFewItems_expectCorrectError() {
         // test
         XCTAssertThrowsError(try NetworkItem(data: "12:09:02.247187"), "", {
             guard case NetworkItem.InitError.invalidItemCount(_, _, _) = $0 else {
@@ -25,7 +25,7 @@ final class NetworkItemTests: XCTestCase {
         })
     }
 
-    func testNetworkItemThrowsErrorWhenGivenTooManyItems() {
+    func test_networkItem_whenGivenTooManyItems_expectCorrectError() {
         // test
         XCTAssertThrowsError(try NetworkItem(data: "12:09:02.247187,systemstats.154,0,0,0,0"), "", {
             guard case NetworkItem.InitError.invalidItemCount(_, _, _) = $0 else {
@@ -35,7 +35,7 @@ final class NetworkItemTests: XCTestCase {
         })
     }
 
-    func testNetworkItemThrowsErrorWhenGivenInvalidDate() {
+    func test_networkItem_whenGivenInvalidDate_expectCorrectError() {
         // test
         XCTAssertThrowsError(try NetworkItem(data: "12:09:02,systemstats.154,0,0,"), "", {
             guard case NetworkItem.InitError.invalidTime(_, _) = $0 else {
@@ -45,7 +45,7 @@ final class NetworkItemTests: XCTestCase {
         })
     }
 
-    func testNetworkItemZerosBytesWhenMissing() {
+    func test_networkItem_whenMissingBytes_expectZeroBytes() {
         // sut
         var item = try? NetworkItem(data: "12:09:02.247187,systemstats.154")
         // test
@@ -65,7 +65,7 @@ final class NetworkItemTests: XCTestCase {
         XCTAssertEqual(item?.bytesOut, 0)
     }
 
-    func testNetworkItemThrowsErrorWhenGivenInvalidByte() {
+    func test_networkItem_whenGivenInvalidBytes_expectCorrectError() {
         // test
         XCTAssertThrowsError(try NetworkItem(data: "12:09:02.247187,systemstats.154,z,0,"), "", {
             guard case NetworkItem.InitError.invalidByte(_, _) = $0 else {
@@ -82,7 +82,7 @@ final class NetworkItemTests: XCTestCase {
         })
     }
 
-    func testNetworkItemCorrectlyChoosesLargestByteValue() {
+    func test_maxBytesAgnostic_whenGivenBytes_expectHighestByte() {
         // sut
         var item = try? NetworkItem(data: "12:09:02.247187,systemstats.154,20,30")
         // test

@@ -27,7 +27,7 @@ final class CommandTests: XCTestCase {
         super.tearDown()
     }
 
-    func testCommandThrowsErrorWhenReceivesSystemError() {
+    func test_command_whenReceivesSystemError_expectCorrectProcessError() {
         // mocks
         let expectation = self.expectation(description: "throws error")
         let code = 999
@@ -53,7 +53,7 @@ final class CommandTests: XCTestCase {
         waitForExpectations(timeout: 0.1) { XCTAssertNil($0) }
     }
 
-    func testCommandThrowsErrorWhenReceivesMissingData() {
+    func test_command_whenReceivesMissingData_expectCorrectProcessError() {
         // mocks
         let expectation = self.expectation(description: "throws error")
         command.publisher.sink(receiveCompletion: {
@@ -78,7 +78,7 @@ final class CommandTests: XCTestCase {
         waitForExpectations(timeout: 0.1) { XCTAssertNil($0) }
     }
 
-    func testCommandThrowsErrorWhenReceivesInvalidString() {
+    func test_command_whenReceivesInvalidString_expectCorrectProcessError() {
         // mocks
         let expectation = self.expectation(description: "throws error")
         command.publisher.sink(receiveCompletion: {
@@ -103,7 +103,7 @@ final class CommandTests: XCTestCase {
         waitForExpectations(timeout: 0.1) { XCTAssertNil($0) }
     }
 
-    func testCommandProcessLaunchesAndWaitsWhenLaunchCalled() {
+    func test_command_whenLaunchCalled_expectProcessLaunchesAndWaits() {
         // sut
         command.launch()
 
@@ -112,7 +112,7 @@ final class CommandTests: XCTestCase {
         XCTAssertTrue(process.invocations.isInvoked(MockProcess.waitUntilExit2.name))
     }
 
-    func testCommandProcessHasOutputWhenLaunchCalled() {
+    func test_command_whenLaunchCalled_expectProcessHasOutput() {
         // sut
         command.launch()
 
