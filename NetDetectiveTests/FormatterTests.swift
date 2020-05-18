@@ -14,7 +14,7 @@ final class FormatterTests: XCTestCase {
         super.tearDown()
     }
 
-    func testFormatterReturnsMessageWhenGivenEmptyItems() {
+    func test_format_whenGivenEmptyItems_expectCorrectMessage() {
         // test
         Formatter.format(items: []).sink(receiveCompletion: {
             XCTAssertNil($0.error)
@@ -24,7 +24,7 @@ final class FormatterTests: XCTestCase {
     }
 
     //swiftlint:disable force_try
-    func testFormatterMessageWhenGivenValidInput() {
+    func test_format_whenGivenValidInput_expectCorrectFormat() {
         // mocks
         let items = ["12:09:02.247187,systemstats.154,1000,0,",
                      "12:09:02.243847,udp4 *:*<->*:*,,,",
