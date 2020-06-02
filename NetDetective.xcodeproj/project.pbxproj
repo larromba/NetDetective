@@ -227,6 +227,7 @@
 		7F5F5BD524251BF500A0E227 = {
 			isa = PBXGroup;
 			children = (
+				7FD653BE2426AEBB0060F407 /* README.md */,
 				7F5F5BE024251BF500A0E227 /* NetDetective */,
 				7F5F5C002426A9CA00A0E227 /* NetDetectiveBundle */,
 				7F030D91242793B8001E7413 /* NetDetectiveTests */,
@@ -248,7 +249,6 @@
 		7F5F5BE024251BF500A0E227 /* NetDetective */ = {
 			isa = PBXGroup;
 			children = (
-				7FD653BE2426AEBB0060F407 /* README.md */,
 				7F5F5BE124251BF500A0E227 /* main.swift */,
 				7F5F5BFA24269BA200A0E227 /* Handler */,
 				7F5F5BF924269B8600A0E227 /* Model */,
