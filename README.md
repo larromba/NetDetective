@@ -91,9 +91,3 @@ rm rf ~/Library/Developer/Xcode/DerivedData/NetDetective
 
 ## Licence
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-
-## Contact
-larromba@gmail.com
-
-## Future work
-1. accept input parameters to customise functionality
